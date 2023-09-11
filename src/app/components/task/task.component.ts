@@ -20,7 +20,7 @@ export default class TaskComponent {
   /**
    * The shape of the task object
   */
-  @Input() task: any;
+  @Input() task: any; //how is this input coming in.
 
   // tslint:disable-next-line: no-output-on-prefix
   @Output()

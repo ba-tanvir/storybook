@@ -1,0 +1,42 @@
+
+<div class="h-3 bg-blue-500"></div>
+<div class="mt-8 flex flex-col items-center justify-center" [formGroup]="form">
+  
+  <div >
+    <label for="branchName" class="text-base">Branch Name</label>
+  <mat-form-field class="w-64" appearance="outline">
+    <input matInput type="text" aria-label="Branch Name" placeholder="Branch Name" id="branchName" name="branchName"
+      formControlName="branchName">
+    <mat-error data-testid="branchNameError">
+      Branch name is required
+    </mat-error>
+  </mat-form-field>
+  </div>
+
+ <div >
+    <label for="branchNameBn" class="text-base">Branch Name (Bangla)</label>
+    <mat-form-field class="w-64" appearance="outline">
+      <input matInput type="text" aria-label="Branch Name (Bangla)" placeholder="Branch Name (Bangla)" id="branchNameBn"
+        name="branchNameBn" formControlName="branchNameBn">
+      <mat-error data-testid="branchNameBnError">
+        Branch name Bengali is required
+      </mat-error>
+    </mat-form-field>
+ </div>
+
+ <div >
+    <label for="branchLocation" class="text-base">Branch Location</label>
+    <mat-form-field class="w-64" appearance="outline">
+      <input matInput type="text" aria-label="Branch Location" placeholder="Branch Location" id="branchLocation"
+        name="branchLocation" formControlName="branchLocation">
+      <mat-error data-testid="branchLocationError">
+        Branch Location is required
+      </mat-error>
+    </mat-form-field>
+ </div>
+
+  <div class="flex gap-x-4">
+    <button mat-raised-button data-testid="Save" color="primary" (click)="save()" [disabled]="!form.valid || !form.dirty"
+      >Save</button>
+  </div>
+</div>
