@@ -21,6 +21,8 @@ export class FormComponent implements OnInit{
         branchName: ['',Validators.required],
         branchNameBn: ['',Validators.required],
         branchLocation:['',Validators.required],
+        branchManager:['',Validators.required],
+        counterNumber:['',Validators.required]
       })
     }
 
@@ -28,13 +30,5 @@ export class FormComponent implements OnInit{
       console.log("save it man");
     }
 
-     //Getters for form fields
-  // get branchName() {
-  //   return this.form.get('branchName');
-  // }
-
-  // get branchNameBn() {
-  //   return this.form.get('branchNameBn');
-  // }
 
 }

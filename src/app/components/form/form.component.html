@@ -35,6 +35,28 @@
     </mat-form-field>
  </div>
 
+ <div >
+    <label for="branchManager" class="text-base">Branch Manager</label>
+    <mat-form-field class="w-64" appearance="outline">
+      <input matInput type="text" aria-label="Branch Manager" placeholder="Branch Manager" id="branchManager"
+        name="branchManager" formControlName="branchManager">
+      <mat-error data-testid="branchManagerError">
+        Branch Manager is required
+      </mat-error>
+    </mat-form-field>
+ </div>
+
+ <div >
+    <label for="counterNumbers" class="text-base">Number of Counters</label>
+    <mat-form-field class="w-64" appearance="outline">
+      <input matInput type="numeric" aria-label="Counter Numbers" placeholder="Counter Numbers" id="counterNumber"
+        name="counterNumber" formControlName="counterNumber">
+      <mat-error data-testid="counterNumberError">
+        Counter Number is required
+      </mat-error>
+    </mat-form-field>
+ </div>
+
   <div class="flex gap-x-4">
     <button mat-raised-button data-testid="Save" color="primary" (click)="save()" [disabled]="!form.valid || !form.dirty"
       >Save</button>

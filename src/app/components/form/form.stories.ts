@@ -56,6 +56,12 @@ export const InvalidFormWithPlay: Story = {
 
       const branchLocationInput = canvas.getByLabelText('Branch Location',{ selector:'input',});
       await userEvent.click(branchLocationInput, {delay:100})
+
+      const branchManagerInput=canvas.getByLabelText('Branch Manager', {selector:'input'} );
+      await userEvent.click(branchManagerInput,{delay:100})
+
+      const counterNumberInput=canvas.getByLabelText('Counter Numbers',{selector:'input'});
+      await userEvent.click(counterNumberInput,{delay:100})
   
      
       const saveButton = canvas.getByTestId('Save')
@@ -69,6 +75,12 @@ export const InvalidFormWithPlay: Story = {
       
       const branchLocationError=canvas.getByTestId('branchLocationError');
       expect(branchLocationError.textContent).toBe('Branch Location is required');
+
+      const branchManagerError=canvas.getByTestId('branchManagerError');
+      expect (branchManagerError.textContent).toBe('Manager is required');
+
+      const counterNumberError=canvas.getByTestId('counterNumberError');
+      expect (counterNumberError.textContent).toBe('Counter Number is required');
   
     }
   }
@@ -97,6 +109,12 @@ export const InvalidFormWithPlay: Story = {
 
       const branchLocationInput=canvas.getByLabelText('Branch Location',{selector:'input'});
       await userEvent.type(branchLocationInput,'Mirpur 1 Market', {delay:100})
+
+      const branchManagerInput=canvas.getByLabelText('Branch Manager',{selector:'input'});
+      await userEvent.type(branchManagerInput,'Rafiul Haque',{delay:200});
+
+      const counterNumberInput=canvas.getByLabelText('Counter Numbers',{selector:'input'});
+      await userEvent.type(counterNumberInput,'1',{delay:100})
   
     
       const saveButton = canvas.getByTestId('Save');
